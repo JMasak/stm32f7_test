@@ -2,21 +2,18 @@
 #![no_std]
 #![no_main]
 
-#[macro_use]
 extern crate alloc;
-
-#[macro_use]
 extern crate stm32f7;
 
-use alloc::sync::Arc;
-use alloc::vec::Vec;
 use alloc_cortex_m::CortexMHeap;
 use core::alloc::Layout as AllocLayout;
 use core::panic::PanicInfo;
 use cortex_m::asm;
+use cortex_m_rt::entry;
 
-fn main() {
-    
+#[entry]
+fn main() -> ! {
+    loop {}    
 }
 
 #[global_allocator]
